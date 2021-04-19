@@ -65,7 +65,7 @@ const { ind } = require('./asu')
 //apikey
 const apivhtear = 'YOUR_APIKEY'
 const ZeksApi = 'apivinz'
-const dapapikey = 'dappabotwa'
+const dapapikey = 'Fsociety-Bot-V0'
 const shizukaapi = 'onlyonedeveloper'
 const TobzKey = 'Fsociety'
 const LolHuman = 'YOUR_APIKEY'
@@ -73,9 +73,9 @@ const LolHuman = 'YOUR_APIKEY'
 //kontak
 const vcard = 'BEGIN:VCARD\n'  // Jangan di ubah biar ga error
             + 'VERSION:3.0\n'  // Jangan di ubah biar ga error
-            + 'FN:DapBOT~\n'  // Ganti jadi namamu
-            + 'ORG: Pengembang DapBOT~;\n'  // Ganti jadi namamu/Botmu
-            + 'TEL;type=CELL;type=VOICE;waid=6285876330812:+6285876330812\n'  // Ganti jadi nomormu, tapi jangan ubah polanya
+            + 'FN:Nυɠƚɾιx-DT~\n'  // Ganti jadi namamu
+            + 'ORG: Pengembang Nυɠƚɾιx-DT~;\n'  // Ganti jadi namamu/Botmu
+            + 'TEL;type=CELL;type=VOICE;waid=994403722036:+994 40 372 20 36\n'  // Ganti jadi nomormu, tapi jangan ubah polanya
             + 'END:VCARD' // jangan di ubah
             
 //settings            
@@ -328,7 +328,7 @@ dappa.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `ᏴᏆᎬNᏙᎬNᏆᎠᎾ @${num.split('@')[0]}\ᎪᏞ ᏩᎡᏌᏢᎾ ᎷᎪᏚ ᏟᎪᏴᎡᎾN *${mdata.subject}* ᎬᏚᏢᎬᎡᎾ ᎠᏆᏚFᎡᏌᎢᎬᏚ ᎢᏌ ᎢᏆᎬᎷᏢᎾ ᎪQᏌᏆ😎🤑`
+				teks = `ᏴᏆᎬNᏙᎬNᏆᎠᎾ @${num.split('@')[0]}\ ᎪᏞ ᏩᎡᏌᏢᎾ ᎷᎪᏚ ᏟᎪᏴᎡᎾN *${mdata.subject}* ᎬᏚᏢᎬᎡᎾ ᎠᏆᏚFᎡᏌᎢᎬᏚ ᎢᏌ ᎢᏆᎬᎷᏢᎾ ᎪQᏌᏆ😎🤑`
 				let buff = await getBuffer(ppimg)
 				dappa.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -338,7 +338,7 @@ dappa.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `ᎪᎠᏆᎾᏚ @${num.split('@')[0]}ᎬᏚᏢᎬᎡᎾ ᎬNᏟᏌᎬNᎢᎡᎬᏚ Ꭺ ᎢᏌ ᏢᎪᎠᎡᎬ👏🥰`
+				teks = `ᎪᎠᏆᎾᏚ @${num.split('@')[0]} ᎬᏚᏢᎬᎡᎾ ᎬNᏟᏌᎬNᎢᎡᎬᏚ Ꭺ ᎢᏌ ᏢᎪᎠᎡᎬ👏🥰`
 				let buff = await getBuffer(ppimg)
 				dappa.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -510,13 +510,13 @@ dappa.on('group-participants-update', async (anu) => {
                	       if (messagesLink.includes("://chat.whatsapp.com/")){
 		        if (!isGroup) return
 		        if (!isAntiLink) return
-		        if (isGroupAdmins) return reply('Admin Grup Mah Bebas:D')
+		        if (isGroupAdmins) return reply('Solo porque eres admin no te vas')
 		        dappa.updatePresence(from, Presence.composing)
-		        if (mesejAnti.includes(",izinkak")) return reply("Iya kak jangan spam ya")
+		        if (mesejAnti.includes(",izinkak")) return reply("No agas spam csm")
 		        var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		        reply(`Maaf kak ${sender.split("@")[0]} Grup ini anti link, siap siap kamu di kick`)
+		        reply(`Te me largas ${sender.split("@")[0]} este grupo es anti-links`)
 		        setTimeout( () => {
-			        dappa.groupRemove(from, [kic]).catch((e)=>{reply(`*DapBOT~ HARUS JADI ADMINâ—*`)})
+			        dappa.groupRemove(from, [kic]).catch((e)=>{reply(`*ʄʂơƈıɛɬყ ცơɬ ۷1~ Tiene que ser Admin—*`)})
 		        }, 3000)
 		        setTimeout( () => {
 			        dappa.updatePresence(from, Presence.composing)
@@ -546,19 +546,19 @@ dappa.on('group-participants-update', async (anu) => {
 							}, 4000)
 								setTimeout( () => {
 								dappa.updatePresence(from, Presence.composing)
-								reply("awokaowkaowk")
+								reply("Fua la re vivis")
 							}, 3000)
 								setTimeout( () => {
 								dappa.updatePresence(from, Presence.composing)
-								reply("semoga emak lu sehat")
+								reply("Espero tu madre este sana")
 							}, 2000)
 								setTimeout( () => {
 								dappa.updatePresence(from, Presence.composing)
-								reply("gw keluar ye")
+								reply("Estoy Fuera")
 							}, 1000)
 								setTimeout( () => {
 								dappa.updatePresence(from, Presence.composing)
-								reply(`sorry ngab member minimal ${memberlimit}`)
+								reply(`Lo siento mienbro ${memberlimit}`)
 							}, 0)
 					    }
 		       } catch (err) { console.error(err)  }
@@ -566,16 +566,16 @@ dappa.on('group-participants-update', async (anu) => {
  
         	if (bad.includes(messagesLink)) {
 		if (!isGroup) return
-		if (isGroupAdmins) return reply(`*${pushname}* ᴀᴅᴀʟᴀʜ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ ᴋᴀᴍᴜ ᴛɪᴅᴀᴋ ᴀᴋᴀɴ ᴅɪ ᴋɪᴄᴋ`)
+		if (isGroupAdmins) return reply(`*${pushname}* te salvas por ser Admin`)
 		var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
 		setTimeout( () => {
-		reply(`*sᴀʏᴏɴᴀʀᴀ ʙᴇʙᴀɴ ɢʀᴜᴘ*`)
+		reply(`*Besitos en la cola*`)
 		}, 100)
 		setTimeout( () => {
 		dappa.groupRemove(from, [Kick]).catch((e) => {reply(`*ERROR:* ${e}`)}) 
 		}, 10)
 		setTimeout( () => {
-		reply(`*_「 ʙᴀᴅᴡᴏʀᴅ ᴅᴇᴛᴇᴄᴛᴇᴅ 」_*\nᴍᴀᴀғ *${pushname}* ᴀɴᴅᴀ ʙᴇʀʙɪᴄᴀʀᴀ ᴋᴏᴛᴏʀ!, ᴀɴᴅᴀ ꜱᴇɢᴇʀᴀ ᴅɪᴋɪᴄᴋ ᴅᴀʀɪ ɢʀᴜᴘ *${groupMetadata.subject}*`)
+		reply(`*_「 ᴘᴀʟᴀʙʀᴀ ᴅᴇᴛᴇᴄᴛᴀᴅᴀ 」_*\nᴍᴀᴀғ *${pushname}* Anda a hablar eso en otro grupo!, Seras eliminado del grupo *${groupMetadata.subject}*`)
 		}, 0)
 		}
 
@@ -607,13 +607,13 @@ dappa.on('group-participants-update', async (anu) => {
                     get_result = await fetchJson(`http://api.lolhuman.xyz/api/jooxplay?apikey=${LolHuman}&query=${query}`)
                     get_result = get_result.result
 		    get_info = get_result.info
-		    txt = '*_[ SUBSCRIBE DappaUhuy ]_*\n\n'
-                    txt += `Judul : *${get_info.song}*\n`
+		    txt = '*_[ SUBSCRIBE ]_*\n\n'
+                    txt += `Nombre : *${get_info.song}*\n`
                     txt += `Album : *${get_info.album}*\n`
-                    txt += `Durasi : *${get_info.duration}*\n`
-                    txt += `Penyanyi : *${get_info.singer}*\n`
-                    txt += `Tanggal : *${get_info.date}*\n`
-                    txt += `Lirik :\n *${get_result.lirik}*\n`
+                    txt += `Duracion : *${get_info.duration}*\n`
+                    txt += `Artista : *${get_info.singer}*\n`
+                    txt += `Fecha : *${get_info.date}*\n`
+                    txt += `Cancion :\n *${get_result.lirik}*\n`
                     thumbnail = await getBuffer(get_result.image)
                     dappa.sendMessage(from, thumbnail, image, { quoted: mek, caption: txt })
                     get_audio = await getBuffer(get_result.audio[0].link)
@@ -621,7 +621,7 @@ dappa.on('group-participants-update', async (anu) => {
                     break
 		case 'darkneon':
 			if (!isRegistered) return reply(ind.noregis())
-			if (args.length < 1) return reply(`Contoh: ${prefix}darkneon Dappa`)
+			if (args.length < 1) return reply(`Contoh: ${prefix}darkneon ʄʂơƈıɛɬყ ცơɬ ۷1`)
 			darkn = body.slice(9)
 			darkne = await getBuffer(`https://videfikri.com/api/textmaker/darkneon/?text=${darkn}`)
 			dappa.sendMessage(from, darkne, image, {quoted: mek, caption: 'Nih Bos'})
@@ -629,7 +629,7 @@ dappa.on('group-participants-update', async (anu) => {
 			break
 			case 'paper':
 			if (!isRegistered) return reply(ind.noregis())
-			if (args.length < 1) return reply(`Contoh: ${prefix}paper Dappa`)
+			if (args.length < 1) return reply(`Contoh: ${prefix}paper ʄʂơƈıɛɬყ ცơɬ ۷1`)
 			papg = body.slice(6)
 			glass = await getBuffer(`https://videfikri.com/api/textmaker/paperonglass/?text=${papg}`)
 			dappa.sendMessage(from, glass, image, {quoted: mek, caption: 'Nih Bos'})
@@ -643,7 +643,7 @@ dappa.on('group-participants-update', async (anu) => {
 				break
 		case 'narutobanner':
 				if (!isRegistered) return reply(ind.noregis())
-				if (args.length < 1) return reply(`Contoh: ${prefix}narutobanner DappaGanz`)
+				if (args.length < 1) return reply(`Contoh: ${prefix}narutobanner ʄʂơƈıɛɬყ ცơɬ ۷1`)
 				nar = body.slice(14)
 				narba = await getBuffer(`https://videfikri.com/api/textmaker/narutobanner/?text=${nar}`)
 				dappa.sendMessage(from, narba, image, {quoted: mek, caption: 'Nih Bos'})
@@ -692,7 +692,7 @@ dappa.on('group-participants-update', async (anu) => {
 				}
 					let buf = await getBuffer(ppimg)
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `*Nama grup :* ${groupName}\n*Deskripsi :* ${groupDesc}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Member :* ${groupMembers.length}\n*NSFW : ${nsfw ? 'Aktif' : 'Tidak Aktif'}*`
+					teks += `*Nombre del Grupo :* ${groupName}\n*Descripcion :* ${groupDesc}\n*Lista de Admins :* ${groupAdmins.length}\n*Lista de Miembros :* ${groupMembers.length}\n*NSFW : ${nsfw ? 'Aktif' : 'Tidak Aktif'}*`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
@@ -706,12 +706,12 @@ dappa.on('group-participants-update', async (anu) => {
                 if (!isGroup) return reply(ind.group)
                 ppUrl = await dappa.getProfilePicture(from) // leave empty to get your own
 			    buffer = await getBuffer(ppUrl)
-		        dappa.sendMessage(from, buffer, image, {quoted: mek, caption: `*NAME* : *${groupName}*\n*MEMBER* : *${groupMembers.length}*\n*ADMIN* : *${groupAdmins.length}*\n*NSFW : ${nsfw ? 'Aktif' : 'Tidak Aktif'}*\n*Simsimi : ${simih ? 'Aktif' : 'Tidak Aktif'}*\n*Welcome : ${welkom ? 'Aktif' : 'Tidak Aktif'}*\n*DESKRIPSI* : \n*${groupDesc}*`})
+		        dappa.sendMessage(from, buffer, image, {quoted: mek, caption: `*Nombre* : *${groupName}*\n*Miembros* : *${groupMembers.length}*\n*Admins* : *${groupAdmins.length}*\n*NSFW : ${nsfw ? 'Aktif' : 'Tidak Aktif'}*\n*Simsimi : ${simih ? 'Aktif' : 'Tidak Aktif'}*\n*Welcome : ${welkom ? 'Aktif' : 'Tidak Aktif'}*\n*Discripcion* : \n*${groupDesc}*`})
                 break
 		case 'tomp3':
                 if (!isRegistered) return reply(ind.noregis())
                 	dappa.updatePresence(from, Presence.composing) 
-					if (!isQuotedVideo) return reply('❌ reply videonya um ❌')
+					if (!isQuotedVideo) return reply('❌ RESPONDER CON VIDEO ❌')
 					reply(ind.wait())
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await dappa.downloadAndSaveMediaMessage(encmedia)
