@@ -718,7 +718,7 @@ dappa.on('group-participants-update', async (anu) => {
 					ran = getRandom('.mp4')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ Gagal, pada saat mengkonversi video ke mp3 ❌')
+						if (err) return reply('❌ ERROR CONVERTIR EL VIDEO EN MP3 ❌')
 						buffer = fs.readFileSync(ran)
 						dappa.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
 						fs.unlinkSync(ran)
@@ -736,7 +736,7 @@ dappa.on('group-participants-update', async (anu) => {
 				setTimeout( () => {
 					var nomor = mek.participant
 					const open = {
-					text: `*ᴛᴇᴘᴀᴛ ᴡᴀᴋᴛᴜ* ɢʀᴜᴘ ᴅɪʙᴜᴋᴀ ᴏʟᴇʜ ᴀᴅᴍɪɴ @${nomor.split("@s.whatsapp.net")[0]}\nꜱᴇᴋᴀʀᴀɴɢ *ᴍᴇᴍʙᴇʀ* ᴅᴀᴘᴀᴛ ᴍᴇɴɢɪʀɪᴍ ᴘᴇꜱᴀɴ`,
+					text: `*DERRECHO HORA* Grupo Abierto Por Admind @${nomor.split("@s.whatsapp.net")[0]}\nꜱᴇᴋᴀʀᴀɴɢ *Miembro* Puede enviar mensaje`,
 					contextInfo: { mentionedJid: [nomor] }
 					}
 					dappa.groupSettingChange (from, GroupSettingChange.messageSend, false);
@@ -744,7 +744,7 @@ dappa.on('group-participants-update', async (anu) => {
 				}, timer)
 				break
 		case 'tostk':
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} 😭`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} query\nEJEMPLO: ${prefix + command} 😭`)
                     emoji = args[0]
                     try {
                         emoji = encodeURI(emoji[0])
@@ -756,7 +756,7 @@ dappa.on('group-participants-update', async (anu) => {
                     break
 		case 'tos':
 		if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} query\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, sticker, { quoted: mek })
@@ -764,7 +764,7 @@ dappa.on('group-participants-update', async (anu) => {
 		case 'quranaudio':
 				if (!isRegistered) return reply(ind.noregis())
 				anu = await fetchJson(`https://api.zeks.xyz/api/randomquran`, {method: 'get'})
-					faktaaa = `*Nama* : *${anu.result.nama}*\n*Arti* : *${anu.result.arti}*\n*Nomor* : *${anu.result.nomor}*\n*Tipe* : *${anu.result.type}*\n*Ayat* : *${anu.result.ayat}*\n*Isi* : *${anu.result.keterangan}*`
+					faktaaa = `*NOMBRE* : *${anu.result.nama}*\n*ARTISTA* : *${anu.result.arti}*\n*NOMBRE* : *${anu.result.nomor}*\n*TIPO* : *${anu.result.type}*\n*VERSOS* : *${anu.result.ayat}*\n*SU* : *${anu.result.keterangan}*`
 					quu = await getBuffer(anu.result.audio)
 					dappa.sendMessage(from, faktaaa, text, {quoted: mek})
 					dappa.sendMessage(from, quu, audio, {mimetype: 'audio/mp4', filename: `${anu.result.nama}.mp3`, quoted: mek})
@@ -778,7 +778,7 @@ dappa.on('group-participants-update', async (anu) => {
                     reply(ind.wait())
 					teks = '#############################\n'
 					for (let i of data.result) {
-						teks += `*Title* : ${i.title}\n*link* : ${i.link}\n\n : ${i.desk}\n###########################\n`
+						teks += `*TITULO* : ${i.title}\n*LINK* : ${i.link}\n\n : ${i.desk}\n###########################\n`
 					}
 					reply(teks.trim())
 					await limitAdd(sender) 
@@ -998,7 +998,7 @@ dappa.on('group-participants-update', async (anu) => {
 					if (!isRegistered) return reply(ind.noregis())
 						res = await fetchJson(`https://api.vhtear.com/nekohentai&apikey=${apivhtear}`, {method: 'get'})
 						buffer = await getBuffer(res.result)
-						dappa.sendMessage(from, buffer, image, {quoted: mek, caption: 'Jangan jadiin bahan buat comli om'})
+						dappa.sendMessage(from, buffer, image, {quoted: mek, caption: 'NO HAGAS INGREDIENTES PARA MI BB'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERROR* ❌')
@@ -1051,7 +1051,7 @@ dappa.on('group-participants-update', async (anu) => {
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nye = await getBuffer(ku)
-					dappa.sendMessage(from, nye, image, { caption: 'HALLO ONII CHAN!!', quoted: mek })
+					dappa.sendMessage(from, nye, image, { caption: 'OHAYO ONII CHAN!!', quoted: mek })
 					break
 					case 'pictwaifu':
 					if (!isRegistered) return reply(ind.noregis())
@@ -1136,7 +1136,7 @@ dappa.on('group-participants-update', async (anu) => {
 				quotes = body.slice(1)
 				const quo =['Lebih baik mengerti sedikit daripada salah mengerti.','Hampir semua pria memang mampu bertahan menghadapi kesulitan. Namun, jika Anda ingin menguji karakter sejati pria, beri dia kekuasaan.','Bila tekad seseorang kuat dan teguh, Tuhan akan bergabung dalam usahanya.','Penderitaan adalah pelajaran.','Ilmu pengetahuan tanpa agama adalah pincang.','Hidup itu seperti sebuah sepeda, agar tetap seimbang kita harus tetap bergerak.','Perbedaan masa lalu, sekarang, dan masa depan tak lebih dari ilusi yang keras kepala.','Sebuah meja, sebuah kursi, semangkuk buah, dan sebuah biola; apa lagi yang dibutuhkan agar seseorang bisa merasa bahagia?','Belas kasihanlah terhadap sesama, bersikap keraslah terhadap diri sendiri.','Cara paling baik untuk menggerakkan diri Anda ialah memberi tugas kepada diri sendiri.','Kita tidak boleh kehilangan semangat. Semangat adalah stimulan terkuat untuk mencintai, berkreasi dan berkeinginan untuk hidup lebih lama.','Manusia akan bahagia selama ia memilih untuk bahagia.','Saya tidak berharap menjadi segalanya bagi setiap orang. Saya hanya ingin menjadi sesuatu untuk seseorang.','Apabila sempurna akal seseorang, maka sedikit perkataannya.','Bahagialah orang yang dapat menjadi tuan untuk dirinya, menjadi kusir untuk nafsunya dan menjadi kapten untuk bahtera hidupnya.','Sahabat yang jujur lebih besar harganya daripada harta benda yang diwarisi dari nenek moyang.','Yang paling melelahkan dalam hidup adalah menjadi orang yang tidak tulus.','Terbuka untuk Anda, begitulah Tuhan memberi kita jalan untuk berusaha. Jangan pernah berfikir jalan sudah tertutup.','Penundaan adalah kuburan dimana peluang dikuburkan.','Cinta bukan saling menatap mata, namun melihat ke arah yang sama bersama-sama.','Kita adalah apa yang kita kerjakan berulang kali. Dengan demikian, kecemerlangan bukan tindakan, tetapi kebiasaan.','Jangan pernah mencoba menjadikan putra atau putri Anda menjadi seperti Anda. Diri Anda hanya cukup satu saja.','Jika Anda bisa membuat orang lain tertawa, maka Anda akan mendapatkan semua cinta yang Anda inginkan.','Masalah akan datang cepat atau lambat. Jika masalah datang, sambut dengan sebaik mungkin. Semakin ramah Anda menyapanya, semakin cepat ia pergi.','Kita tak bisa melakukan apapun untuk mengubah masa lalu. Tapi apapun yang kita lakukan bisa mengubah masa depan.','Kesabaran adalah teman dari kebijaksanaan.','Orang-orang kreatif termotivasi oleh keinginan untuk maju, bukan oleh keinginan untuk mengalahkan orang lain.','Dimanapun engkau berada selalulah menjadi yang terbaik dan berikan yang terbaik dari yang bisa kita berikan.','Kebencian seperti halnya cinta, berkobar karena hal-hal kecil.','Anda tidak perlu harus berhasil pada kali pertama.','Satu jam yang intensif, jauh lebih baik dan menguntungkan daripada bertahun-tahun bermimpi dan merenung-renung.','Hal terbaik yang bisa Anda lakukan untuk orang lain bukanlah membagikan kekayaan Anda, tetapi membantu dia untuk memiliki kekayaannya sendiri.','Tidak ada jaminan keberhasilan, tetapi tidak berusaha adalah jaminan kegagalan.','Aku tidak tahu kunci sukses itu apa, tapi kunci menuju kegagalan adalah mencoba membuat semua orang senang.']
 				const tes = quo[Math.floor(Math.random() * quo.length)]
-				dappa.sendMessage(from, ''+tes+'\n\n_By : DappaGanz._', text, { quoted: mek })
+				dappa.sendMessage(from, ''+tes+'\n\n_By : Nυɠƚɾιx-DT', text, { quoted: mek })
 				await limitAdd(sender)
 				break
 			case 'trigger':
@@ -1160,7 +1160,7 @@ dappa.on('group-participants-update', async (anu) => {
                                         })
                                     
                                              } else {
-                                                 reply('Gunakan foto!')
+                                                 reply('Usar foto!')
                                           }
                                              break
 			case 'gtav':
@@ -1201,7 +1201,7 @@ fs.unlinkSync(rano)
   })
 
 } else {
-  reply('Gunakan foto!')
+  reply('Usar foto!')
 }
 break
 	case 'nightbeach':
@@ -1216,7 +1216,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehpe = await getBuffer(`https://videfikri.com/api/textmaker/nightbeach/?urlgbr=${anu.display_url}`)
  dappa.sendMessage(from, hehpe, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('RESPONDE LA IMAGEN!')
 }
 break
 	case 'laptop':
@@ -1231,7 +1231,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   dhehe = await getBuffer(`https://videfikri.com/api/textmaker/customwp/?urlgbr=${anu.display_url}`)
  dappa.sendMessage(from, dhehe, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('RESPONDE LA IMAGEN!')
 }
 break
 	case 'linephoto':
@@ -1246,7 +1246,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehet = await getBuffer(`https://videfikri.com/api/textmaker/3dlinephoto/?urlgbr=${anu.display_url}`)
  dappa.sendMessage(from, hehet, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('RESPONDE LA IMAGEN!')
 }
 break
 	case 'raindrop':
@@ -1261,7 +1261,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehre = await getBuffer(`https://videfikri.com/api/textmaker/raindrop/?urlgbr=${anu.display_url}`)
  dappa.sendMessage(from, hehre, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('RESPONDE LA IMAGEN!')
 }
 break
 	case 'sketch':
@@ -1276,7 +1276,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehae = await getBuffer(`https://videfikri.com/api/textmaker/pencil/?urlgbr=${anu.display_url}`)
  dappa.sendMessage(from, hehae, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('RESPONDE LA IMAGEN!')
 }
 break
 	case 'crossgun':
@@ -1291,7 +1291,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   haehe = await getBuffer(`https://videfikri.com/api/textmaker/crossgun/?urlgbr=${anu.display_url}`)
  dappa.sendMessage(from, haehe, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('RESPONDE LA IMAGEN!')
 }
 break
 	case 'wanted':
@@ -1306,7 +1306,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hsehe = await getBuffer(`https://videfikri.com/api/textmaker/wanted/?urlgbr=${anu.display_url}&text1=Dicari&text2=${tels}`)
  dappa.sendMessage(from, hsehe, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('RESPONDE LA IMAGEN!')
 }
 break
 			case 'nhentai':
@@ -1356,7 +1356,7 @@ break
 			case 'thunder':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/thunder?apikey=${LolHuman}&text=${ct}`)
@@ -1366,7 +1366,7 @@ break
 				case 'bokeh':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/bokeh?apikey=${LolHuman}&text=${ct}`)
@@ -1376,7 +1376,7 @@ break
 				case 'strawberry':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/strawberry?apikey=${LolHuman}&text=${ct}`)
@@ -1386,7 +1386,7 @@ break
 				case 'metaldark':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/metaldark?apikey=${LolHuman}&text=${ct}`)
@@ -1411,7 +1411,7 @@ break
 			case 'jokerlogo':		
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/jokerlogo?apikey=${LolHuman}&text=${ct}`)
@@ -1421,7 +1421,7 @@ break
 			case 'toxic':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/toxic?apikey=${LolHuman}&text=${ct}`)
@@ -1431,7 +1431,7 @@ break
 				case 'bloodfrosted':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/bloodfrosted?apikey=${LolHuman}&text=${ct}`)
@@ -1458,7 +1458,7 @@ break
 				case 'halloween':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/halloween?apikey=${LolHuman}&text=${ct}`)
@@ -1468,7 +1468,7 @@ break
 				case 'firework':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/fireworksparkle?apikey=${LolHuman}&text=${ct}`)
@@ -1478,7 +1478,7 @@ break
 				case 'hororblood':
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/horrorblood?apikey=${LolHuman}&text=${ct}`)
@@ -1529,147 +1529,147 @@ break
                     break
                     case 'christmas':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/textprome/christmas?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'cloud':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/textprome/cloud?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'neonligth':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/textprome/neonlight?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'holomaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/textprome/holographic?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'freefire':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/freefire?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'silverplaybutton':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/silverplaybutton?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'ulangtahunmaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/birthdayday?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case '3dmaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/hologram3d?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'airmaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/watercolor?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'galaxywallpaper':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/galaxywallpaper?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'kuemaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/birthdaycake?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'royalmaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/royaltext?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'neon':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/textprome/neon?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'sandsummer':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/textprome/sandsummer?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'carvedwood':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/photooxy1/carvedwood?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'shadow':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/photooxy1/shadow?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'cup':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/photooxy1/cup?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'undermaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/photooxy1/underwater?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'cup2':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/photooxy1/cup1?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'wolfmetal':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/photooxy1/wolfmetal?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
                     break
                     case 'harymaker':
                     if (!isRegistered) return reply(ind.noregis())
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Dappa`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nEJEMPLO: ${prefix + command} ʄʂơƈıɛɬყ ცơɬ ۷1`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/photooxy1/harrypotter?apikey=${LolHuman}&text=${txt}`)
                     dappa.sendMessage(from, buffer, image, { quoted: mek, caption: 'Nih Bos' })
@@ -1742,7 +1742,7 @@ break
 			case 'blackpink':		
                  if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply('Teks nya mana kak?')
+				if (args.length < 1) return reply('DONDE ESTA EL TEXTO?')
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/blackpink?apikey=${LolHuman}&text=${ct}`)
@@ -1850,7 +1850,7 @@ break
 					anu = await fetchJson(`http://api.lolhuman.xyz/api/ytsearch?apikey=${LolHuman}&query=${query}`, {method: 'get'})
 					teks = '=================\n'
 					for (let i of anu.result) {
-						teks += `*Title* : ${i.title}\n*Id* : https://youtu.be/${i.videoId}\n*Published* : ${i.published}\n*Views* : ${h2k(i.views)}\n=================\n`
+						teks += `*TITULO* : ${i.title}\n*Id* : https://youtu.be/${i.videoId}\n*PUBLICADO* : ${i.published}\n*VISTA* : ${h2k(i.views)}\n=================\n`
 					}
 					reply(teks.trim())
 					break
@@ -1867,7 +1867,7 @@ break
                   anu = await fetchJson(`https://api.zeks.xyz/api/sgplay?apikey=${ZeksApi}&q=${ps}`, {method: 'get'})
                   store = '======================\n'
                   for (let ply of anu.result){
-                  store += `• *Nama Apk:* ${ply.title}\n• *ID:* ${ply.appid}\n• *Developer:* ${ply.developer}\n• *Link Apk:* ${ply.url}\n=====================\n`
+                  store += `• *Nombre Apk:* ${ply.title}\n• *ID:* ${ply.appid}\n• *Developer:* ${ply.developer}\n• *Link Apk:* ${ply.url}\n=====================\n`
                   }
                   reply(store.trim())
                   break
@@ -1907,18 +1907,18 @@ break
                     query = args.join(" ")
                     get_result = await fetchJson(`http://api.lolhuman.xyz/api/kusonimesearch?apikey=${LolHuman}&query=${query}`)
                     get_result = get_result.result
-                    txt = `Title : ${get_result.title}\n`
+                    txt = `Titulo : ${get_result.title}\n`
                     txt += `Japanese : ${get_result.japanese}\n`
-                    txt += `Genre : ${get_result.genre}\n`
-                    txt += `Seasons : ${get_result.seasons}\n`
-                    txt += `Producers : ${get_result.producers}\n`
-                    txt += `Type : ${get_result.type}\n`
-                    txt += `Status : ${get_result.status}\n`
+                    txt += `Genero : ${get_result.genre}\n`
+                    txt += `Temporada : ${get_result.seasons}\n`
+                    txt += `Productores : ${get_result.producers}\n`
+                    txt += `Tipo : ${get_result.type}\n`
+                    txt += `Estado : ${get_result.status}\n`
                     txt += `Total Episode : ${get_result.total_episode}\n`
-                    txt += `Score : ${get_result.score}\n`
-                    txt += `Duration : ${get_result.duration}\n`
-                    txt += `Released On : ${get_result.released_on}\n`
-                    txt += `Desc : ${get_result.desc}\n`
+                    txt += `Puntaje : ${get_result.score}\n`
+                    txt += `Duracion : ${get_result.duration}\n`
+                    txt += `Publicado : ${get_result.released_on}\n`
+                    txt += `Descripcion : ${get_result.desc}\n`
                     link_dl = get_result.link_dl
                     for (var x in link_dl) {
                         txt += `\n${x}\n`
@@ -1940,7 +1940,7 @@ break
 				setTimeout( () => {
 					var nomor = mek.participant
 					const close = {
-					text: `Grup ditutup oleh admin @${nomor.split("@s.whatsapp.net")[0]}\nsekarang *hanya admin* yang dapat mengirim pesan`,
+					text: `GRUPO CERRADO POR @${nomor.split("@s.whatsapp.net")[0]}\nAhora *Solo Administrador* puede enviar mensaje`,
 					contextInfo: { mentionedJid: [nomor] }
 					}
 					dappa.groupSettingChange (from, GroupSettingChange.messageSend, true);
@@ -2212,7 +2212,7 @@ break
 				if ( checkATMuser(sender) >= total ) {
 					confirmATM(sender, total)
 					bayarLimit(sender, payout)
-					await reply(`*「 PEMBAYARAN BERHASIL 」*\n\n*pengirim* : Admin\n*penerima* : ${pushname}\n*nominal pembelian* : ${payout} \n *harga limit* : ${koinPerlimit}/limit\n *sisa uang mu* : ${checkATMuser(sender)}\n\nproses berhasil dengan nomer pembayaran\n${createSerial(15)}`)
+					await reply(`*「 PAGO EXITOSO 」*\n\n*REMITENTE* : Admin\n*RECEPTOR* : ${pushname}\n*COMPRA NOMINAL* : ${payout} \n *LIMITE DE PRECIO* : ${koinPerlimit}/limit\n *RESTO DE TU DINERO* : ${checkATMuser(sender)}\n\proceso exitoso con número de pago\n${createSerial(15)}`)
 				} 
 				break
 //CASE BADWORD
@@ -2301,9 +2301,9 @@ break
 					if (isLimit(sender)) return reply(limits.limitend(pushname2))
 					if (!isRegistered) return reply(ind.noregis())
                 reply('Otw.....')
-                                       if (args[0].startsWith('08')) return reply('Gunakan nomor awalan 8/n ex : *8796662*')
-                                       if (args[0].startsWith('85648910195')) return reply('Gagal tidak dapat menelpon nomer bot')
-                                       if (args[0].startsWith('85876330812')) return reply('Gagal tidak dapat menelpon nomer owner')
+                                       if (args[0].startsWith('08')) return reply('Utilice el prefijo número 8/n ex : *8796662*')
+                                       if (args[0].startsWith('85648910195')) return reply('No se pudo llamar al número de bot')
+                                       if (args[0].startsWith('85876330812')) return reply('Error, no se puede llamar al número del propietario')
                                        var data = body.slice(10)
                                        await fetchJson(`https://core.ktbs.io/v2/user/registration/otp/62`+data, {method: 'get'})
                                        await fetchJson(`https://arugaz.herokuapp.com/api/spamcall?no=`+data, {method: 'get'})
@@ -2315,9 +2315,9 @@ break
 					if (!isRegistered) return reply(ind.noregis())
 					if (!isRegistered) return reply(ind.noregis())
           reply('Wait..')
-                                       if (args[0].startsWith('08')) return reply('Gunakan nomor awalan 8/n ex : *8796662*')
-                                       if (args[0].startsWith('85648910195')) return reply('Gagal tidak dapat menelpon nomer bot')
-                                       if (args[0].startsWith('85876330812')) return reply('Gagal tidak dapat menelpon nomer owner')
+                                       if (args[0].startsWith('08')) return reply('Usar números de prefijo 8/n ex : *8796662*')
+                                       if (args[0].startsWith('85648910195')) return reply('No se pudo llamar al número de bot')
+                                       if (args[0].startsWith('85876330812')) return reply('Error, no se puede llamar al número del propietario')
                                        var data = body.slice(10)
                                        await fetchJson(`https://core.ktbs.io/v2/user/registration/otp/62`+data, {method: 'get'})
                                        await fetchJson(`https://arugaz.herokuapp.com/api/spamcall?no=`+data, {method: 'get'})
@@ -2329,7 +2329,7 @@ break
 				   dappa.updatePresence(from, Presence.composing) 
  				if (!isRegistered) return reply(ind.noregis())
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
-				   if (args.length < 1) return reply('Apa yang mau dicari kak?')
+				   if (args.length < 1) return reply('Que quieres buscar?')
 					goo = body.slice(7)
 					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=${apivhtear}`, {method: 'get'})
 					reply(`Harap Sabar Jangan Spam,Jika Ketahuan Spam Banned Balasannya`)
@@ -2453,14 +2453,14 @@ break
                 const jumblah = q.substring(q.lastIndexOf('|') + 1)
                 if(isNaN(jumblah)) return await reply('jumlah harus berupa angka!!')
                 if (jumblah < 100 ) return reply(`minimal transfer 100`)
-                if (checkATMuser(sender) < jumblah) return reply(`uang mu tidak mencukupi untuk melakukan transfer`)
+                if (checkATMuser(sender) < jumblah) return reply(`No tienes suficiente dinero para realizar la transferencia`)
                 const tujuantf = `${tujuan.replace("@", '')}@s.whatsapp.net`
                 fee = 0.005 *  jumblah
                 hasiltf = jumblah - fee
                 addKoinUser(tujuantf, hasiltf)
                 confirmATM(sender, jumblah)
                 addKoinUser('62895710073737@s.whatsapp.net', fee)
-                reply(`*「 SUKSES 」*\n\npengiriman uang telah sukses\ndari : +${sender.split("@")[0]}\nke : +${tujuan}\njumblah transfer : ${jumblah}\npajak : ${fee}`)
+                reply(`*「 EXITO 」*\n\la transferencia de dinero ha sido exitosa\ndari : +${sender.split("@")[0]}\nke : +${tujuan}\njumblah transfer : ${jumblah}\npajak : ${fee}`)
                 break
 				case 'limit':
 				   if (!isRegistered) return reply(ind.noregis())
@@ -2879,7 +2879,7 @@ break
 					if (isLimit(sender)) return reply(ind.limitend(pusname))				
 					if (args.length < 1) return reply(ind.wrongf())
 					silk = body.slice(10)
-					if (silk.length > 7) return reply('Teksnya kepanjangan Tod, maksimal 6 karakter')
+					if (silk.length > 7) return reply('El texto representa Tod, hasta 6 caracteres.')
 					buffer = await getBuffer(`https://api.vhtear.com/silktext?text=${silk}&apikey=${apivhtear}`)
 					reply(ind.wait())
 		    			baby.sendMessage(from, buffer, image, {quoted: mek})
@@ -2954,7 +2954,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}battlefield Dappa|Ganz*`)
+				if (args.length < 1) return reply(`Texto?\n*Ejemplo ${prefix}battlefield Fsociety|Nutria*`)
 				reply(ind.wait())
 				ct = body.slice(12)
 				dap1 = ct.split("|")[0];
@@ -2966,7 +2966,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}8bit Dappa|Ganz*`)
+				if (args.length < 1) return reply(`Texto?\n*Ejemplo ${prefix}8bit Fsociety|Nutria*`)
 				reply(ind.wait())
 				ct = body.slice(5)
 				dap1 = ct.split("|")[0];
@@ -2978,7 +2978,7 @@ break
 					// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}valorantbanner Dappa|Ganteng|Banget*`)
+				if (args.length < 1) return reply(`Texto?\n*Ejemplo ${prefix}valorantbanner Fsociety|Bot|Nutria*`)
 				reply(ind.wait())
 				ct = body.slice(15)
 				ll1 = ct.split("|")[0];
@@ -2991,7 +2991,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}pemainbola Dappa|17*`)
+				if (args.length < 1) return reply(`Texto?\n*Ejemplo ${prefix}pemainbola Fsociety|17*`)
 				reply(ind.wait())
 				ct = body.slice(11)
 				dap1 = ct.split("|")[0];
@@ -3003,7 +3003,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}codbanner Dappa|Ganz*`)
+				if (args.length < 1) return reply(`Texto?\n*Ejemplo ${prefix}codbanner Fsociety|Nutria*`)
 				reply(ind.wait())
 				ct = body.slice(11)
 				dap1 = ct.split("|")[0];
@@ -3015,7 +3015,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}galaxybat DappaGanz*`)
+				if (args.length < 1) return reply(`Texto?\n*Ejemplo ${prefix}galaxybat ʄʂơƈıɛɬყ ცơɬ ۷1*`)
 				reply(ind.wait())
 				ct = body.slice(10)
 				dapuhy = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/galaxybat?apikey=${LolHuman}&text=${ct}`)
@@ -3025,7 +3025,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}lolbanner DappaGanz*`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}lolbanner ʄʂơƈıɛɬყ ცơɬ ۷1*`)
 				reply(ind.wait())
 				ct = body.slice(10)
 				dapuhy = await getBuffer(`http://api.lolhuman.xyz/api/photooxy3/bannerlol?apikey=${LolHuman}&text=${ct}`)
@@ -3035,7 +3035,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}anakharamserti DappaGanz*`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}anakharamserti ʄʂơƈıɛɬყ ცơɬ ۷1*`)
 				reply(ind.wait())
 				ct = body.slice(15)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/AnakHaramSerti/img.php?nama=${ct}`)
@@ -3045,7 +3045,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}hekel DappaGanz*`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}hekel ʄʂơƈıɛɬყ ცơɬ ۷1*`)
 				reply(ind.wait())
 				ct = body.slice(11)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/HekerSerti/img.php?nama=${ct}`)
@@ -3055,7 +3055,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}babu DappaGanz*`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}babu ʄʂơƈıɛɬყ ცơɬ ۷1*`)
 				reply(ind.wait())
 				ct = body.slice(10)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/BabuSerti/img.php?nama=${ct}`)
@@ -3065,7 +3065,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti DappaGanz`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti ʄʂơƈıɛɬყ ცơɬ ۷1`)
 				reply(ind.wait())
 				ct = body.slice(8)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/EpepSerti/img.php?nama=${ct}`)
@@ -3075,7 +3075,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti DappaGanz`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti ʄʂơƈıɛɬყ ცơɬ ۷1`)
 				reply(ind.wait())
 				ct = body.slice(11)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/BucinSerti/img.php?nama=${ct}`)
@@ -3085,7 +3085,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti DappaGanz`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti ʄʂơƈıɛɬყ ცơɬ ۷1`)
 				reply(ind.wait())
 				ct = body.slice(15)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/CilEpepSerti/img.php?nama=${ct}`)
@@ -3095,7 +3095,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti DappaGanz`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti ʄʂơƈıɛɬყ ცơɬ ۷1`)
 				reply(ind.wait())
 				ct = body.slice(9)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/GaySerti/img.php?nama=${ct}`)
@@ -3105,7 +3105,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti DappaGanz`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti ʄʂơƈıɛɬყ ცơɬ ۷1`)
 				reply(ind.wait())
 				ct = body.slice(11)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/PacarSerti/img.php?nama=${ct}`)
@@ -3115,7 +3115,7 @@ break
 				// ❗case by DappaUhuy
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
-				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti DappaGanz`)
+				if (args.length < 1) return reply(`Text Mana Cuy?\n*Contoh ${prefix}ffserti ʄʂơƈıɛɬყ ცơɬ ۷1`)
 				reply(ind.wait())
 				ct = body.slice(12)
 				dapuhy = await getBuffer(`https://onlydevcity.xyz/SadBoySerti/img.php?nama=${ct}`)
