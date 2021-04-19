@@ -299,7 +299,7 @@ dappa.logger.level = 'warn'
 console.log(banner.string)
    dappa.on('qr', qr => {
    qrcode.generate(qr, { small: true })
-	console.log(color('(+)','white'), color('DappaGanz','red'), color('(+)','white'), color(' SQAN CODENYA','aqua'), color('SUBREK YT DappaUhuy','yellow'))
+	console.log(color('(+)','white'), color('ʄʂơƈıɛɬყ ცơɬ ۷1','red'), color('(+)','white'), color(' ESCANEA EL CODIGO QR','aqua'), color('CREADOR: Nυɠƚɾιx-DT','yellow'))
 })
 
 	dappa.on('credentials-updated', () => {
@@ -308,10 +308,10 @@ console.log(banner.string)
 	})
 	fs.existsSync('./dappauhy.json') && dappa.loadAuthInfo('./dappauhy.json')
 	dappa.on('connecting', () => {
-		start('2', color('[ ! ]Scan Codenya Ngab','aqua'))
+		start('2', color('[ ! ]ESCANEALO LO MAS RAPIDO POSIBLE','aqua'))
 	})
 	dappa.on('open', () => {
-		success('2', color('[ ! ]Tersambung','red'))
+		success('2', color('[ ʄʂơƈıɛɬყ ცơɬ ۷1 ]...CONECTADO, DISFRUTA :D','red'))
 	})
 	dappa.connect({timeoutMs: 30*1000})
 
