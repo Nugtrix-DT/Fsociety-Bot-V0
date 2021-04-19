@@ -65,9 +65,9 @@ const { ind } = require('./asu')
 //apikey
 const apivhtear = 'YOUR_APIKEY'
 const ZeksApi = 'apivinz'
-const dapapikey = 'Fsociety-Bot-V0'
+const dapapikey = 'ʄʂơƈıɛɬყ ცơɬ ۷1'
 const shizukaapi = 'onlyonedeveloper'
-const TobzKey = 'Fsociety'
+const TobzKey = 'ʄʂơƈıɛɬყ ცơɬ ۷1'
 const LolHuman = 'YOUR_APIKEY'
 
 //kontak
