@@ -12,4 +12,4 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 npm install
 npm i imgbb-uploader
 
-echo "[❗] SILAKAN KETIK  [node index.js] UNTUK MENJALANKAN SCRIPT"
+echo "[❗] PARA EJECUTAR EL BOT COLOCA [node index.js] Y DISFRUTA"
